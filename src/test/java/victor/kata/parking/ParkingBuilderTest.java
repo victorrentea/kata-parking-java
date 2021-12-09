@@ -8,7 +8,9 @@ public class ParkingBuilderTest {
 
     @Test
     public void testBuildBasicParking() {
-        final Parking parking = new ParkingBuilder().withSquareSize(4).build();
+        final Parking parking = new ParkingBuilder()
+            .withSquareSize(4)
+            .build();
         assertEquals(16, parking.getAvailableBays());
     }
 
@@ -23,7 +25,10 @@ public class ParkingBuilderTest {
 
     @Test
     public void testBuildParkingWithDisabledSlot() {
-        final Parking parking = new ParkingBuilder().withSquareSize(2).withDisabledBay(2).build();
+        final Parking parking = new ParkingBuilder()
+            .withSquareSize(2)
+            .withDisabledBay(2)
+            .build();
         assertEquals(4, parking.getAvailableBays());
     }
 
